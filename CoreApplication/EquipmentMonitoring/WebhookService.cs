@@ -1,9 +1,10 @@
 ﻿
 public record Subscription(string Topic, string Callback);
 
-record PublishRequest(string Topic, object Message);
+public record PublishRequest(string Topic, object Message);
 public class WebhookService
 {
+    //Should be saved in a database
     private readonly List<Subscription> _subscriptions = new();
     private readonly HttpClient _httpClient = new();
 

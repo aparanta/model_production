@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Hosting.Server;
 
-const string server = "https://localhost:7296/";
-const string callback = "https://localhost:7129/wh/item/new";
-const string topic = "item.new";
+const string server = "https://localhost:7296/v1";
+const string callback = "https://localhost:7129/v1/webhook_callback";
+const string topic = "equipmentstate.update";
 
 var client = new HttpClient();
 
@@ -31,8 +31,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-app.MapPost("/wh/item/new", (object payload, ILogger<Program> logger) =>
-{
-    logger.LogInformation("Received payload: {payload}", payload);
-});
+
 app.Run();
