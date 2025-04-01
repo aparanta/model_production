@@ -9,7 +9,7 @@ Core Application has UPDATE API for equipment state.
 Missing db implementation and trigger to webhook on success
 
 Run : EquipmentMonitoring first
-Run : Run EquipmentMonitoringClient to start subscribing 
+Run : EquipmentMonitoringClient to start subscribing 
 
 
 
