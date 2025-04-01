@@ -1,0 +1,6 @@
+@EquipmentMonitoringClient_HostAddress = http://localhost:5171
+
+GET {{EquipmentMonitoringClient_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
